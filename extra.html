@@ -1,27 +1,181 @@
-<section id="projects">
-  <h2>My Projects</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+.contact-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top right, #1a1a1a, #000); 
+    padding: 20px;
+}
 
-  <div class="projects-container">
+.glass-container {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03); /* Subtle white overlay */
+    backdrop-filter: blur(15px); /* The Glass Effect */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.5);
+}
 
-    <div class="project-card">
-      <img src="project1.jpg" alt="">
-      <h3>Portfolio Website</h3>
-      <p>A responsive personal portfolio using HTML, CSS, JS.</p>
-      <div class="buttons">
-        <a href="#">Live</a>
-        <a href="#">Code</a>
-      </div>
+/* Left Content Styling */
+.contact-content {
+    flex: 1;
+    padding: 60px;
+    background: rgba(18, 247, 255, 0.02); /* Slight neon tint */
+}
+
+.contact-content h1 {
+    font-size: 2.8rem;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.contact-content p {
+    color: #aaa;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.detail-item i {
+    color: #12f7ff; /* Your Neon Green */
+}
+
+/* Form Styling */
+.contact-form-box {
+    flex: 1.2;
+    padding: 60px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.contact-form-box h2 {
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+input, select, textarea {
+    flex: 1;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: #fff;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: #12f7ff;
+    box-shadow: 0 0 10px rgba(18, 247, 255, 0.2);
+}
+
+.book-btn {
+    width: 100%;
+    padding: 15px;
+    background: #12f7ff;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.book-btn:hover {
+    background: #fff;
+    box-shadow: 0 0 20px #12f7ff;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+    .glass-container { flex-direction: column; }
+    .contact-content, .contact-form-box { padding: 40px; }
+}
+
+
+  </style>
+</head>
+<body>
+  <section class="contact-section">
+    <div class="container">
+        <div class="contact-header">
+            <h1>Contact Us</h1>
+            <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
+        </div>
+
+        <div class="contact-wrapper">
+            <!-- Contact Details -->
+            <div class="contact-details">
+                <div class="detail-box">
+                    <div class="icon"><i class="fas fa-home"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>4671 Sugar Camp Road,<br>Owatonna, Minnesota 55060</p>
+                    </div>
+                </div>
+                <div class="detail-box">
+                    <div class="icon"><i class="fas fa-phone"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>507-475-2351</p>
+                    </div>
+                </div>
+                <div class="detail-box">
+                    <div class="icon"><i class="fas fa-envelope"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>example@email.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2>Send Message</h2>
+                <form>
+                    <div class="input-box">
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-box">
+                        <textarea placeholder="Type your Message..." required></textarea>
+                    </div>
+                    <div class="input-box">
+                        <button type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-
-    <div class="project-card">
-      <img src="project2.jpg" alt="">
-      <h3>E-commerce UI</h3>
-      <p>Modern shopping UI design with clean layout.</p>
-      <div class="buttons">
-        <a href="#">Live</a>
-        <a href="#">Code</a>
-      </div>
-    </div>
-
-  </div>
 </section>
+
+<!-- Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cloudflare.com">
+
+</body>
+</html>
